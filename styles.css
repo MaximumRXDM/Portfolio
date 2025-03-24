@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: black; /* Set background to black */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    z-index: 10;
+    position: relative;
+}
+
+.squares-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Adjust size here */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevents interaction with the squares */
+}
+
+.square {
+    width: 50px; /* Adjust size here */
+    height: 50px; /* Adjust size here */
+    background: black; /* Change square color to black */
+    border: 1px solid white; /* Thin white border */
+    transition: transform 0.3s, background 0.3s;
+    pointer-events: auto; /* Allows interaction with the squares */
+}
+
+.square:hover {
+    transform: translateY(-10px); /* Rise up effect */
+}
